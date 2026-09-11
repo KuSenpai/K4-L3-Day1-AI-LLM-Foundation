@@ -38,7 +38,16 @@ source .venv/bin/activate        # Windows: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-**3. Chạy thử bộ test** — phải fail hàng loạt, đó là dấu hiệu đúng:
+**3. Chạy giao diện chatbot (tuỳ chọn):**
+
+```bash
+python -m streamlit run app.py
+```
+
+Mở URL mà Streamlit hiển thị trong trình duyệt. UI đọc API key và model từ `.env`,
+không hiển thị API key trên màn hình.
+
+**4. Chạy thử bộ test** — phải fail hàng loạt, đó là dấu hiệu đúng:
 
 ```bash
 pytest tests/ -v
